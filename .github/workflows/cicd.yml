@@ -37,7 +37,7 @@ jobs:
 
     - name: SonarQube Quality Gate Check
       id: sonarqube-quality-gate-check
-      uses: sonarsource/sonarqube-quality-gate-action@3.0.0
+      uses: sonarsource/sonarqube-quality-gate-action@master
       timeout-minutes: 5
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
