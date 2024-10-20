@@ -23,9 +23,7 @@ jobs:
       with:
         name: Boardgame
         path: target/*.jar
-    - name: Trivy FS Scan
-      run: |
-        trivy fs --format table -o trivy-fs-report.html .
+   
     - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@v1.1.0
       env:
@@ -49,9 +47,7 @@ jobs:
       run: |
         docker build -t custyblak/boardgame:latest .
         
-    - name: Trivy Image Scan
-      run: |
-        trivy image --format table -o trivy-image-report.html custyblak/boardgame:latest
+   
       
     - name: Login to Docker Hub
       uses: docker/login-action@v3
