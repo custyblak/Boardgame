@@ -61,4 +61,4 @@ jobs:
         push: true
         tags: custyblak/boardgame:latest
     
-
+# Installed maven
