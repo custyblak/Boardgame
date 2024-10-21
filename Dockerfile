@@ -2,10 +2,9 @@ FROM adoptopenjdk/openjdk11
     
 EXPOSE 8080
  
-ENV APP_HOME /usr/src/app
+WORKDIR /usr/src/app
 
-COPY target/*.jar $APP_HOME/app.jar
+COPY /home/ubuntu/_work/Boardgame/Boardgame/target/*.jar .
 
-WORKDIR $APP_HOME
 
 CMD ["java", "-jar", "app.jar"]
